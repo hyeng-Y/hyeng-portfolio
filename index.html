@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hyeng-Portfolio</title>
+
+    <!-- 구글 폰트 불러오기 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/script.js" defer></script>
+    <!-- <script src="https://kit.fontawesome.com/514b7930da.js" crossorigin="anonymous"></script> -->
+
+    <!-- 오프닝 영상 스타일 -->
+    <style>
+      #opening {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+      #opening figure {
+        position: relative;
+        width: 0 auto;
+        height: 0 auto;
+        z-index: 0;
+      }
+      #opening .intro-video {
+        position: relative;
+        width: 0 auto;
+        height: 0 auto;
+      }
+      #opening .text {
+        position: absolute;
+        margin: 0;
+        top: calc(100vh / 3);
+        width: 100%;
+        height: 361px;
+        background-color: #111;
+        opacity: 0.5;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #opening .text > p {
+        color: #fff;
+        position: relative;
+        text-align: center;
+        width: 80%;
+        line-height: 180.5px;
+        font-weight: 900;
+        font-size: 50px;
+        z-index: 2;
+      }
+      /* 메인 콘텐츠는 처음에 숨겨짐 */
+      #main-content {
+        display: none;
+      }
+      /* 전환 효과 (영상 → 메인) */
+      .fade-out {
+        background-color: #ffd580 !important;
+        transition: background-color 0.3s ease, opacity 0.8s ease;
+        opacity: 0;
+        visibility: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 오프닝 영상 -->
+    <div id="opening">
+      <figure>
+        <video id="intro-video" class="intro-video" autoplay muted>
+          <source src="videos/더미영상 인트로.mp4" />
+        </video>
+      </figure>
+      <div class="text">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+    <!-- 메인 콘텐츠 -->
+    <div id="main-content" class="wrap">
+      <!-- 헤더 -->
+      <header class="header">
+        <div class="navi_bg">
+          <div class="box"></div>
+        </div>
+        <div class="logo">
+          <a href="#">Hyeng Studios</a>
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <!-- About -->
+            <li class="has-submenu">
+              <a href="#about">About</a>
+              <div class="submenu">
+                <a href="#introduce">Introduce</a>
+                <a href="#process">Intro</a>
+                <a href="#work">Work</a>
+              </div>
+            </li>
+            <!-- Projects -->
+            <li class="has-submenu">
+              <a href="#projects">Projects</a>
+              <div class="submenu">
+                <a href="#video">영상작업</a>
+                <a href="#design">디자인작업</a>
+                <a href="#coding">코딩작업</a>
+                <a href="#study">스터디한것</a>
+              </div>
+            </li>
+          </ul>
+          <button class="contact-btn solid">Contact</button>
+        </nav>
+      </header>
+
+      <!-- 메인 -->
+      <main class="main">
+        <div class="main_top_banner">
+          <div class="text-area">
+            <h1>“Creating Impact,</h1>
+            <h1>One Frame at a Time”</h1>
+            <h3>프레임 하나하나에 담긴 고민과 감각으로</h3>
+            <h3>차별화된 결과물을 완성합니다.</h3>
+            <h3>장면을 연결하고 감정을 설계하는 크리에이티브 에디터</h3>
+            <h3>재미를 더하고, 구독을 부르는 유튜브 편집자</h3>
+          </div>
+          <div class="banner-box">
+            <img src="images/더미이미지.jpg" alt="배너" />
+          </div>
+        </div>
+        <div id="process" class="main_intro_1">
+          <div class="intro-text-area">
+            <h1>
+              영상 속 내용에 생명력을 불어넣어,
+              <p>사람들이 기억하는 콘텐츠를 만드는 편집자</p>
+            </h1>
+            <h3>스토리를 영상으로 완성하는 에디터</h3>
+            <h3>브랜드와 메시지를 기억에 남게 만드는 영상 편집자</h3>
+            <h3>장면을 연결하고 감정을 설계하는 크리에이티브 에디터</h3>
+            <h3>재미를 더하고, 구독을 부르는 유튜브 편집자</h3>
+          </div>
+          <ul class="banner-box-wrap">
+            <li class="banner-box1">
+              <img src="https://picsum.photos/300/500?random=4" alt="배너" />
+            </li>
+            <li class="banner-box2">
+              <img src="https://picsum.photos/400/400?random=5" alt="배너" />
+            </li>
+            <li class="banner-box3">
+              <img src="https://picsum.photos/400/400?random=6" alt="배너" />
+            </li>
+            <li class="banner-box4">
+              <img src="https://picsum.photos/300/500?random=7" alt="배너" />
+            </li>
+          </ul>
+        </div>
+        <div id="work" class="main_intro_2">
+          <h3>부제목이요</h3>
+          <h1>할 수 있는 일, 기술</h1>
+          <ul class="work-card">
+            <li>
+              <figure></figure>
+              <h4>work-1</h4>
+              <p>설명설명설명</p>
+            </li>
+            <li>
+              <figure></figure>
+              <h4>work-2</h4>
+              <p>설명설명설명</p>
+            </li>
+            <li>
+              <figure></figure>
+              <h4>work-3</h4>
+              <p>설명설명설명</p>
+            </li>
+          </ul>
+        </div>
+        <div id="introduce" class="introduce">
+          <h3>부제목이요</h3>
+          <h1>자기소개</h1>
+          <div class="i-wrap">
+            <ul>
+              <li>
+                <div class="img-box"></div>
+                <h4>Lorem ipsum dolor sit amet.</h4>
+              </li>
+              <li>
+                <div class="img-box"></div>
+                <h4>Lorem ipsum dolor sit amet.</h4>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="img-box"></div>
+                <h4>Lorem ipsum dolor sit amet.</h4>
+              </li>
+              <li>
+                <div class="img-box"></div>
+                <h4>Lorem ipsum dolor sit amet.</h4>
+              </li>
+              <li>
+                <div class="img-box"></div>
+                <h4>Lorem ipsum dolor sit amet.</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="video" class="video">
+          <h4>부제목입니다</h4>
+          <h1>영상 작업</h1>
+          <video src="videos/더미영상 인트로.mp4" loop autoplay muted></video>
+        </div>
+        <div id="design" class="project_1">
+          <h1>프로젝트-1 디자인 작업</h1>
+          <div class="img-carousel">
+            <div class="img-card-wrap">
+              <div class="img-card">A</div>
+              <div class="img-card">B</div>
+              <div class="img-card">C</div>
+            </div>
+            <!-- 애니메이션 반복을 위한 복사 -->
+            <div class="img-card-wrap">
+              <div class="img-card">A</div>
+              <div class="img-card">B</div>
+              <div class="img-card">C</div>
+            </div>
+            <!-- 애니메이션 반복을 위한 복사 -->
+            <div class="img-card-wrap">
+              <div class="img-card">A</div>
+              <div class="img-card">B</div>
+              <div class="img-card">C</div>
+            </div>
+          </div>
+        </div>
+        <div id="coding" class="project_2">
+          <h1>프로젝트-2 코딩 작업</h1>
+          <div class="coding-wrap"></div>
+        </div>
+        <div id="study" class="process">
+          <h3>부제목이요</h3>
+          <h1>과정, 스터디</h1>
+          <div class="process-card">
+            <ul>
+              <li>
+                <div class="p-card1">
+                  <img src="https://picsum.photos/280/200?random=1" alt="1" />
+                  <a href="#">제목1</a>
+                </div>
+              </li>
+              <li>
+                <div class="p-card2">
+                  <img src="https://picsum.photos/280/200?random=2" alt="2" />
+
+                  <a href="#">제목2</a>
+                </div>
+              </li>
+              <li>
+                <div class="p-card3">
+                  <img src="https://picsum.photos/280/200?random=3" alt="3" />
+                  <a href="#">제목3</a>
+                </div>
+              </li>
+              <li>
+                <div class="p-card4">
+                  <img src="https://picsum.photos/280/200?random=4" alt="4" />
+
+                  <a href="#">제목4</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+
+      <!-- 푸터 -->
+      <footer class="footer">
+        <img src="images/더미이미지.jpg" alt="푸터배경" />
+        <div class="footer_bottom">
+          <div class="contact_b">
+            <span>
+              단순한 영상 편집자가 아닌, 채널 브랜딩과 성장 전략까지 함께
+              고민하며
+            </span>
+            <span> 크리에이터와 협업해 채널 성장에 직접 기여하는 파트너 </span>
+            <button class="contact-btn solid">Contact</button>
+          </div>
+          <div class="bottom_">
+            <div class="bottom_l">
+              <div class="slog">
+                <span>“Creating Impact,</span>
+                <span>One Frame at a Time”</span>
+              </div>
+              <div class="logo-copy">
+                <div class="logo">
+                  <a href="#">Hyeng Studios</a>
+                </div>
+                <div class="copy">
+                  <span>Copyright 2025 hyeng. All rights reserved.</span>
+                </div>
+              </div>
+            </div>
+            <div class="bottom_r">
+              <div class="sns">
+                <a href="#">instagram</a>
+                <a href="#">kakao.openchat</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
